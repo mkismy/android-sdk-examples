@@ -17,9 +17,12 @@ public class SimpleWidgetFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_simple_widget, container, false);
-        TaboolaWidget taboolaWidget = view.findViewById(R.id.taboola_view);
+        TaboolaWidget taboolaWidget = view.findViewById(R.id.taboola_widget);
+        taboolaWidget.setAutoResizeHeight(true);
+        taboolaWidget.setInterceptScroll(true);
+        taboolaWidget.setPageUrl("https://www.sankei.com");
         HashMap<String, String> optionalPageCommands = new HashMap<>();
-        optionalPageCommands.put("useOnlineTemplate", "true");
+        optionalPageCommands.put("keepDependencies", "true");
         taboolaWidget.setExtraProperties(optionalPageCommands);
         taboolaWidget.fetchContent();
         return view;
