@@ -15,20 +15,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="@string/lorem_ipsum_short" />
+            android:text="@string/lorem_ipsum_huge" />
 
         <com.taboola.android.TaboolaWidget
             android:id="@+id/taboola_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            taboola:mode="alternating-widget-without-video"
-            taboola:page_type="article"
-            taboola:placement="Below Article"
-            taboola:publisher="sdk-tester"
-            taboola:target_type="mix"
-            taboola:url="https://blog.taboola.com" />
+            taboola:tb_mode="alternating-thumbnails-b"
+            taboola:tb_page_type="article"
+            taboola:tb_placement="Below Article Thumbnails"
+            taboola:tb_publisher="sankeiplus-app-android-sdkstandard"
+            taboola:tb_target_type="mix"
+            taboola:tb_url="https://www.sankei.com/west/news/190626/wst1906260017-n1.html" />
 
     </LinearLayout>
 
 </ScrollView>
-
