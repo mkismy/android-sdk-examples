@@ -18,8 +18,10 @@ public class SimpleWidgetFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_simple_widget, container, false);
         TaboolaWidget taboolaWidget = view.findViewById(R.id.taboola_view);
+        taboolaWidget.setInterceptScroll(true);
         HashMap<String, String> optionalPageCommands = new HashMap<>();
         optionalPageCommands.put("useOnlineTemplate", "true");
+        optionalPageCommands.put("forcedFixedHeight", "false");
         taboolaWidget.setExtraProperties(optionalPageCommands);
         taboolaWidget.fetchContent();
         return view;
